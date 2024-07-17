@@ -13,7 +13,16 @@ const LOGIN_CONFIG: ZuAuthArgs = {
     revealAttendeeSemaphoreId: true
   },
   watermark: WATERMARK.toString(),
-  config: ETHBERLIN04,
+  config: [
+    {
+      eventName: "0xPARC Summer",
+      pcdType: "eddsa-ticket-pcd",
+      publicKey: ETHBERLIN04[0].publicKey,
+      productName: "Superuser",
+      productId: "324e7d6b-e0af-416c-b27a-1d091a156ca5",
+      eventId: "654a38cd-de57-4093-9d21-5418e217db1e"
+    }
+  ],
   returnUrl: "http://localhost:4001"
 };
 
